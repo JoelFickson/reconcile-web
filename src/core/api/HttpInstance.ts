@@ -4,7 +4,7 @@ import axios from "axios";
 const StorageKey = 'vwaza_artist';
 const NetworkService = () => {
 
-    const baseURL = process.env.NODE_ENV === "development" ? "http://localhost:8080/" : "https://tutuka.herokuapp.com/"
+    const baseURL = process.env.NODE_ENV === "development" ? "http://localhost:8080/" : "https://reconcile-api.herokuapp.com/"
 
 
 

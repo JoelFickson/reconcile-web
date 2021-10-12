@@ -3,6 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 import NetworkService from "../api/HttpInstance";
 import {AppDispatch} from "../store/store";
+import any = jasmine.any;
 
 interface ReconcileState {
 
@@ -52,7 +53,6 @@ export const {setResponseData, setLoading, setErrorMessage} = reconcileSlice.act
 export const FileUpload = (formData: FormData) => async (dispatch: AppDispatch) => {
 
 
-
     dispatch(setLoading())
 
 
@@ -75,7 +75,10 @@ export const FileUpload = (formData: FormData) => async (dispatch: AppDispatch) 
 
 
     } catch (e) {
+        dispatch(setLoading())
+        dispatch(setErrorMessage("There was an error"));
 
+        //TODO: Handle specific errors
     }
 
 }
