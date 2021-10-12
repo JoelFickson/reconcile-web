@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const NavBar: React.FC = () => {
     return <nav className="navbar navbar-expand-lg shadow-sm p-2 navbar-light bg-light">
         <div className="container-fluid">
-            <a className="navbar-brand text-primary" href="#">Tutuka Reconciliation</a>
+            <Link className="navbar-brand text-primary" to="/">Tutuka Reconciliation</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
